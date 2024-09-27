@@ -92,7 +92,6 @@ with other FPGA components such as clocks and RAM. We will be removing these cou
 |   LUT1    |   0   |
 |  CARRY8   |   0   |
 
-
 ### Components to Transistors
 | Component | Count | Basic Unit Count (# per) | NAND Gate Count | Transistor Count (N/P Type) |
 |:---------:|:-----:|:------------------------:|:---------------:|:---------------------------:|
@@ -106,49 +105,223 @@ with other FPGA components such as clocks and RAM. We will be removing these cou
 |   OBUF    |   2   |          2 (1)           |        4        |             8/8             |
 |  CARRY8   |   8   |       40/32 (5/4)        |       288       |           576/576           |
 
-### Components used in Timer
-| Component | Count |
-|:---------:|:-----:|
-|   FDRE    |  65   |
-|   LUT6    |   0   |
-|   LUT5    |   0   |
-|   LUT4    |   0   |
-|   LUT3    |   0   |
-|   LUT2    |  32   |
-|   LUT1    |   1   |
-|  CARRY8   |   8   |
-
-### Components to Transistors (Without Timer)
-| Component | Count | Basic Unit Count (# per) | NAND Gate Count | Transistor Count (N/P Type) |
-|:---------:|:-----:|:------------------------:|:---------------:|:---------------------------:|
-|   FDRE    |  170  |         170 (1)          |      1530       |          3060/3060          |
-|   LUT6    |  106  |        6678 (63)         |      26712      |         53424/53424         |
-|   LUT5    |  39   |        1209 (31)         |      4836       |          9672/9672          |
-|   LUT4    |  39   |         585 (15)         |      2340       |          4680/4680          |
-|   LUT3    |  22   |         154 (7)          |       616       |          1232/1232          |
-|   LUT2    |  10   |          30 (3)          |       120       |           240/240           |
-|   LUT1    |   3   |          3 (1)           |       12        |            24/24            |
-|   OBUF    |   2   |          2 (1)           |        4        |             8/8             |
-|  CARRY8   |   0   |            0             |        0        |              0              |
-
 ### Total Gate/Transistor Count
-| Variant  | NAND Gate Count | Transistor Count (N/P Type) |
-|:--------:|:---------------:|:---------------------------:|
-|  Timer   |      37179      |         74934/74934         |
-| No Timer |      36170      |         72340/72340         |
+| NAND Gate Count | Transistor Count (N/P Type) |
+|:---------------:|:---------------------------:|
+|      37179      |         74934/74934         |
 
-## Analysis
+## Analysis (LUTs and Flip-Flops)
 
-With gate and transistor counts, we can now evaluate the cost, time, and area estimates. 
+With gate and transistor counts, we can now evaluate the cost, time, and area estimates. It is readily apparent that at
+this scale, it is unlikely that individual transistors will be a viable path. To this end, I am starting the cost
+estimation with NAND gates only. When looking for representative components to estimate with, 4ch NAND gates are still
+prolific and in many cases, the same price as 1ch NAND gates. Conversely, 6ch NAND gates are in many cases discontinued
+and what parts can be found are orders of magnitude more expensive. 
 
 ### Component Costs
-For component cost estimation, we will assume purchasing at volumes that meet as well as exceed needed counts and the 
-per-unit pricing at this volume is listed.
+For component cost estimation, I am assuming purchasing at volumes that meet the needed counts and the per-unit pricing
+at this volume is listed.
 
-| Component |                                        Example Unit                                        | Count | Minimum Volume Unit Cost | Excessive Volume Unit Cost | Minimum Volume Total Cost | Excessive Volume Total Cost |
-|:---------:|:------------------------------------------------------------------------------------------:|:-----:|:------------------------:|:--------------------------:|:-------------------------:|:---------------------------:|
-| 4CH NAND  | https://www.digikey.com/en/products/detail/rochester-electronics-llc/MC74VHC00M/12128029 | 9294  |          $0.06           |           $0.06            |          $557.64          |           $557.64           |
-
+| Component |                                       Example Unit                                       | Count | Unit Cost | Total Cost | 
+|:---------:|:----------------------------------------------------------------------------------------:|:-----:|:---------:|:----------:|
+| 4CH NAND  | https://www.digikey.com/en/products/detail/rochester-electronics-llc/MC74VHC00M/12128029 | 9294  |   $0.06   |  $557.64   |
 
 From this evaluation alone, the cost is prohibitively high, implying a different set of conditions for the
-implementation will be necessary.
+implementation will be necessary. Given that the estimation described here is known to be on the upper end of element
+counts, it is now worth estimating an alternative implementation.
+
+### Comparison of LUT + FF vs Logic Gates
+
+Due to the large number of gates involved, driven heavily by the LUT6 case, it becomes worthwhile to evaluate the
+discrete logic to determine other possible scales of the estimation. Several major components of the SoC will be 
+considered by using the RTL elaborated design from Vivado. For these calculations, the various elements will be 
+represented with NAND gate counts as prescribed in the following table:
+
+##### NAND Gates per Element
+
+|     Element     | NAND Gates |
+|:---------------:|:----------:|
+|     2:1 Mux     |     4      |
+|       XOR       |     4      |
+|       AND       |     2      |
+|      NAND       |     1      |
+|       NOT       |     1      |
+|       OR        |     3      |
+|       FF        |     9      |
+| 1bit Half Adder |     6      |
+
+All implementations will consider 100% implementation with NAND gates as well as using discrete Flip-Flops for the 
+flip-flop components. For the purposes of cost estimation, the same component as above is used, under the assumption
+that the unit quantity will still meet the volume pricing. Additionally, for the flip-flop case, the following part is
+considered:
+
+| Component |                                  Example Unit                                   | Count | Unit Cost | Total Cost |
+|:---------:|:-------------------------------------------------------------------------------:|:-----:|:---------:|:----------:|
+|  2CH FF   | https://www.digikey.com/en/products/detail/texas-instruments/SN74HC74PWR/377064 |  250  | $0.09832  |   $24.58   |
+
+#### serv_alu
+
+##### LUT + FF Implementation
+
+| Element | Basic Unit Count | NAND Gates |
+|:-------:|:----------------:|:----------:|
+|  2 FF   |        2         |     18     |
+| 1 LUT5  |        31        |    124     |
+| 1 LUT6  |        63        |    252     |
+
+|        | NAND Gates | FF | NAND Chips | FF Chips | NAND Cost | FF Cost | Total |
+|:------:|:----------:|:--:|:----------:|:--------:|:---------:|:-------:|:-----:|
+| w/o FF |    394     | 0  |     99     |    0     |   $5.94   |  $0.00  | $5.94 |
+| w/ FF  |    376     | 2  |     94     |    2     |   $5.64   |  $0.20  | $5.84 |
+
+##### Logic Gates
+
+|           Element            | NAND Gates |
+|:----------------------------:|:----------:|
+|          2 2:1 Mux           |     8      |
+|            2 XOR             |     8      |
+|            10 AND            |     20     |
+|            3 NOT             |     3      |
+|             6 OR             |     18     |
+|             2 FF             |     18     |
+| 4 Half Adder (1 XOR + 1 AND) |     24     |
+
+|        | NAND Gates | FF | NAND Chips | FF Chips | NAND Cost | FF Cost | Total |
+|:------:|:----------:|:--:|:----------:|:--------:|:---------:|:-------:|:-----:|
+| w/o FF |     99     | 0  |     25     |    0     |   $1.50   |  $0.00  | $1.50 |
+| w/ FF  |     81     | 2  |     21     |    2     |   $1.26   |  $0.20  | $1.46 |
+
+#### serv_bufreg
+
+##### LUT + FF
+
+| Element | Basic Unit Count | NAND Gates |
+|:-------:|:----------------:|:----------:|
+|  34 FF  |        34        |    306     |
+| 2 LUT2  |        6         |     24     |
+| 2 LUT6  |        14        |     56     |
+| 2 LUT4  |        30        |    120     |
+| 1 LUT6  |        63        |    252     |
+
+|        | NAND Gates | FF | NAND Chips | FF Chips | NAND Cost | FF Cost | Total  |
+|:------:|:----------:|:--:|:----------:|:--------:|:---------:|:-------:|:------:|
+| w/o FF |    758     | 0  |    190     |    0     |  $11.40   |  $0.00  | $11.40 |
+| w/ FF  |    452     | 34 |    113     |    17    |   $6.78   |  $1.67  | $8.45  |
+
+##### Logic Gates
+
+|           Element            | NAND Gates |
+|:----------------------------:|:----------:|
+|          3 2:1 Mux           |     12     |
+|   2 4bit 4:1 Mux (12 2:1)    |     48     |
+|            6 AND             |     12     |
+|            3 NOT             |     3      |
+|             1 OR             |     3      |
+|            32 FF             |    288     |
+
+|        | NAND Gates | FF | NAND Chips | FF Chips | NAND Cost | FF Cost | Total |
+|:------:|:----------:|:--:|:----------:|:--------:|:---------:|:-------:|:-----:|
+| w/o FF |    366     | 0  |     92     |    0     |   $5.52   |  $0.00  | $5.52 |
+| w/ FF  |     78     | 32 |     20     |    16    |   $4.68   |  $1.57  | $6.25 |
+
+#### rf_ram_if
+
+##### LUT + FF
+
+| Element | Basic Unit Count | NAND Gates |
+|:-------:|:----------------:|:----------:|
+|  13 FF  |        34        |    306     |
+| 1 LUT1  |        1         |     4      |
+| 3 LUT2  |        9         |     36     |
+| 3 LUT3  |        21        |     84     |
+| 2 LUT4  |        30        |    120     |
+| 1 LUT5  |        31        |    124     |
+| 1 LUT6  |        63        |    252     |
+
+|        | NAND Gates | FF | NAND Chips | FF Chips | NAND Cost | FF Cost | Total  |
+|:------:|:----------:|:--:|:----------:|:--------:|:---------:|:-------:|:------:|
+| w/o FF |    737     | 0  |    185     |    0     |  $11.10   |  $0.00  | $11.10 |
+| w/ FF  |    620     | 13 |    155     |    17    |   $9.30   |  $0.69  | $9.99  |
+
+##### Logic Gates
+
+|                Element                | NAND Gates |
+|:-------------------------------------:|:----------:|
+|               1 2:1 Mux               |     4      |
+|        2 2bit 2:1 Mux (3 2:1)         |     16     |
+|        3 5bit 2:1 Mux (15 2:1)        |     60     |
+|        2 6bit 2:1 Mux (12 2:1)        |     48     |
+|                 3 AND                 |     6      |
+|                 4 OR                  |     12     |
+|                 19 FF                 |    171     |
+| 1 5bit Half Adder (5 1bit HA + 4 XOR) |     46     |
+|            1 5bit Subtract            |     46     |
+
+|        | NAND Gates | FF | NAND Chips | FF Chips | NAND Cost | FF Cost | Total |
+|:------:|:----------:|:--:|:----------:|:--------:|:---------:|:-------:|:-----:|
+| w/o FF |    399     | 0  |    100     |    0     |   $6.00   |  $0.00  | $6.00 |
+| w/ FF  |    228     | 19 |     20     |    10    |   $3.42   |  $0.98  | $4.40 |
+
+#### Average
+
+|                 | NAND Chips | FF Chips | NAND Cost | FF Cost | Total  | Normalized Cost |
+|:---------------:|:----------:|:--------:|:---------:|:-------:|:------:|:---------------:|
+|   LUT w/o FF    |    474     |    0     |  $28.44   |  $0.00  | $28.44 |       1.0       |
+|    LUT w/ FF    |    362     |    36    |  $21.72   |  $3.54  | $25.26 |      0.89       |
+| Discrete w/o FF |    217     |    0     |  $13.02   |  $0.00  | $13.02 |      0.46       |
+| Discrete w/ FF  |     61     |    28    |   $3.66   |  $3.54  | $7.20  |      0.25       |
+
+### Conclusions
+
+From the above table, it is apparent that using discrete logic chips with flip-flops is by far the most cost-effective
+option. Taken as a very crude estimate, the \$557.64 goes to \$139.41, which is a much more reasonable logic component 
+cost, knowing that there will still be board and supporting component costs. With the substantial decrease in component
+count, it is possible that the per-unit pricing in the estimates are excessively low. Evaluating 100 unit quantities of
+similar parts, per chip pricing only increases by about \$0.02 overall. For the lowest chip option of discrete logic with
+flip-flops, this would average about \$0.10/chip for a total cost of approximately \$8.90 for the estimated portion, or 
+\$175 total - still a wildly more acceptable amount. 
+
+## Size Estimate
+
+### Methodology
+
+Given the cost estimation results, we have chip counts available with typical package dimensions available. From here, 
+a total board area for the chip footprints can be determined. Additional margin can be assigned for each chip to account
+for routing, supporting passive components and interconnects. From this, a total board area can be determined with 
+multipliers for things like single/double-sided assembly and this information fed to an online quoting platform to
+generate a rough estimate of PCB cost. For the sake of argument, the sizing will be performed for each of the 4
+configurations evaluated in the pricing estimate.
+
+### Some assumptions:
+
+- Both the 4ch NAND gates and 2ch Flip-Flops are in 14 TSSOP Surface Mount packages. (6.6mm x 4.5mm - 29.7 mm^2)
+- Conventional board technologies will be used 
+  - 2 layer, FR-4
+  - Default thickness and copper weight for the board house
+  - Default minimum trace width and spacing (typically <=0.008" which is plenty small)
+  - Default minimum via specifications (typically <=0.043", similarly sufficient)
+  - Standard copper finish (whatever it is)
+- Boards are estimated to be square
+- Components will be placed on the top side only (should increase cost estimate)
+- Cheapest lead time/shipping is acceptable
+  - If shipping cost is called out, it is not used in pricing
+- The absolute lower bound on additional area needed results in 5x the chip area
+- PCBWay is used for the estimation. Quotes are for quantities of 5 (minimum)
+- No panelling is used
+
+### Analysis
+
+|                            | # Chips (Partial) | # Chips (Estimated) | Chip Area (mm^2) | Total Area (mm^2) | Dimension (mm) |  Total   | Normalized Cost | 
+|:--------------------------:|:-----------------:|:-------------------:|:----------------:|:-----------------:|:--------------:|:--------:|:---------------:|
+|         LUT w/o FF         |        474        |        9294         |     276031.8     |      1380159      |     1174.8     | $2281.95 |       1.0       | 
+|         LUT w/ FF          |        398        |        7804         |     231778.8     |      1158894      |     1076.5     | $1941.68 |      0.85       |
+|      Discrete w/o FF       |        217        |        4255         |     126373.5     |     631867.5      |     794.9      | $1216.25 |      0.53       |
+|       Discrete w/ FF       |        89         |        1745         |     51826.5      |     259132.5      |     509.1      | $324.85  |      0.14       |
+| Discrete w/ FF (Dual Side) |        89         |        1745         |     25913.3      |     129566.3      |      360       | $178.88  |      0.08       |
+
+### Conclusions
+
+Much as the component cost was dramatically higher for the LUT based implementation, the PCB area and corresponding cost 
+astronomically high (to say nothing of the 1.1 meter square circuit board). In particular, the discrete with flip-flop 
+case is on par with the component cost and if dual-sided component layout is used, the cost is considerably reduced, 
+even to a point where 4 layer boards are a possibility if needed.
