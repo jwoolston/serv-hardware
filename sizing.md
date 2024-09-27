@@ -325,3 +325,31 @@ Much as the component cost was dramatically higher for the LUT based implementat
 astronomically high (to say nothing of the 1.1 meter square circuit board). In particular, the discrete with flip-flop 
 case is on par with the component cost and if dual-sided component layout is used, the cost is considerably reduced, 
 even to a point where 4 layer boards are a possibility if needed.
+
+## Time Estimate
+
+### Methodology
+
+For the time estimate, my primary concern is soldering time. There is certain to be inordinate amounts of time invested
+into this project, all of which is by choice. However, from a practicality standpoint, a project that requires 1 
+man-year of soldering time is going to require a re-evaluation. For this estimation, we will do a high side estimate 
+case where soldering is performed by hand with an iron. Supporting passives and interconnects will not be evaluated, 
+partly because they are not known at this point. A simple "order of magnitude" result of days, weeks, months, etc. is 
+all I am concerned with. From previous experience, I feel reasonably confident that each chip can be soldered on average
+in less than 30 seconds. Given the volume, it is quite likely to result in some of the fastest soldering I've ever 
+accomplished by the end from sheer practice. For this reason, plus the unaccounted for passives, I will just use the
+crude 30s per chip value.
+
+|                            | # Chips (Partial) | # Chips (Estimated) | Time (s) | Time (hr) | # 2 hr Sessions |
+|:--------------------------:|:-----------------:|:-------------------:|:--------:|:---------:|:---------------:|
+|         LUT w/o FF         |        474        |        9294         |  278820  |   77.45   |       39        |
+|         LUT w/ FF          |        398        |        7804         |  234120  |    65     |      32.5       |
+|      Discrete w/o FF       |        217        |        4255         |  127650  |   35.46   |       18        |
+|       Discrete w/ FF       |        89         |        1745         |  52350   |   14.54   |       7.5       |
+| Discrete w/ FF (Dual Side) |        89         |        1745         |  52350   |   14.54   |       7.5       |
+
+## Final Analysis
+
+From the 3 major sizings, it is clear the most realistically attainable version of this project is to use discrete logic
+with flip-flops. With this, the cost will be _AT LEAST_ \$350-\$500. This is an azymptotic lower limit of sorts since it
+specifically ignores passives, interconnects, clocks and power circuitry. Nevertheless, it serves as a useful baseline.
