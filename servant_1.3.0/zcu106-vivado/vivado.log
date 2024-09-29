@@ -1,0 +1,620 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Fri Sep 27 19:48:56 2024
+# Process ID: 128224
+# Current directory: C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent120464 C:\Users\Jared Woolston\Documents\GitHub\serv-hardware\servant_1.3.0\zcu106-vivado\servant_1.3.0.xpr
+# Log file: C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/vivado.log
+# Journal file: C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado\vivado.jou
+# Running On        :DESKTOP-8CFAEH8
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :AMD Ryzen 9 9900X 12-Core Processor            
+# CPU Frequency     :4392 MHz
+# CPU Physical cores:12
+# CPU Logical cores :24
+# Host memory       :66184 MB
+# Swap memory       :4160 MB
+# Total Virtual     :70344 MB
+# Available Virtual :32519 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/servant_1.3.0.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado'
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+INFO: [Project 1-313] Project file moved from '/home/jwoolston/serv_latest_workspace/build/servant_1.3.0/zcu106-vivado' since last save.
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.3 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.3/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.2 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.2/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.2/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2024.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/servant_1.3.0.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
+open_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1567.418 ; gain = 396.422
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xczu7ev-ffvc1156-2-e
+Top: servus
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 124216
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 3107.129 ; gain = 93.324
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6901] identifier 'f' is used before its declaration [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servile_1.3.0/servile/servile_mux.v:64]
+INFO: [Synth 8-6157] synthesizing module 'servus' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus.v:2]
+	Parameter memsize bound to: 8192 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:73658]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (0#1) [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:73658]
+INFO: [Synth 8-6157] synthesizing module 'servus_clock_gen' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:2]
+INFO: [Synth 8-6157] synthesizing module 'MMCME4_ADV' [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:82781]
+	Parameter CLKFBOUT_MULT_F bound to: 48.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 8.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 75.000000 - type: double 
+	Parameter DIVCLK_DIVIDE bound to: 5 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME4_ADV' (0#1) [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:82781]
+WARNING: [Synth 8-7071] port 'CDDCDONE' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'CLKFBSTOPPED' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'CLKINSTOPPED' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'DO' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'DRDY' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'PSDONE' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'CDDCREQ' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'DADDR' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'DCLK' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'DEN' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'DI' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'DWE' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'PSCLK' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'PSEN' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'PSINCDEC' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7023] instance 'mmcm' of module 'MMCME4_ADV' has 35 connections declared, but only 20 given [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'servus_clock_gen' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:2]
+INFO: [Synth 8-6157] synthesizing module 'servant' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant.v:2]
+	Parameter memfile bound to: zephyr_hello.hex - type: string 
+	Parameter memsize bound to: 8192 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'servant_mux' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant_mux.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'servant_mux' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant_mux.v:7]
+INFO: [Synth 8-6157] synthesizing module 'servant_ram' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant_ram.v:2]
+	Parameter depth bound to: 8192 - type: integer 
+	Parameter RESET_STRATEGY bound to: MINI - type: string 
+	Parameter memfile bound to: zephyr_hello.hex - type: string 
+INFO: [Synth 8-251] Preloading  from zephyr_hello.hex [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant_ram.v:42]
+INFO: [Synth 8-3876] $readmem data file 'zephyr_hello.hex' is read successfully [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant_ram.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'servant_ram' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant_ram.v:2]
+INFO: [Synth 8-6157] synthesizing module 'servant_timer' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant_timer.v:2]
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter RESET_STRATEGY bound to: MINI - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'servant_timer' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant_timer.v:2]
+INFO: [Synth 8-6157] synthesizing module 'servant_gpio' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant_gpio.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'servant_gpio' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant_gpio.v:1]
+INFO: [Synth 8-6157] synthesizing module 'serv_rf_ram' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_rf_ram.v:1]
+	Parameter width bound to: 2 - type: integer 
+	Parameter csr_regs bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'serv_rf_ram' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_rf_ram.v:1]
+INFO: [Synth 8-6157] synthesizing module 'servile' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servile_1.3.0/servile/servile.v:9]
+	Parameter rf_width bound to: 2 - type: integer 
+	Parameter sim bound to: 1'b0 
+	Parameter with_c bound to: 1'b0 
+	Parameter with_csr bound to: 1'b1 
+	Parameter with_mdu bound to: 1'b0 
+INFO: [Synth 8-6157] synthesizing module 'servile_mux' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servile_1.3.0/servile/servile_mux.v:8]
+	Parameter sim bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'servile_mux' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servile_1.3.0/servile/servile_mux.v:8]
+INFO: [Synth 8-6157] synthesizing module 'servile_arbiter' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servile_1.3.0/servile/servile_arbiter.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'servile_arbiter' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servile_1.3.0/servile/servile_arbiter.v:9]
+INFO: [Synth 8-6157] synthesizing module 'serv_rf_ram_if' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_rf_ram_if.v:2]
+	Parameter width bound to: 2 - type: integer 
+	Parameter reset_strategy bound to: MINI - type: string 
+	Parameter csr_regs bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'serv_rf_ram_if' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_rf_ram_if.v:2]
+INFO: [Synth 8-6157] synthesizing module 'serv_top' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_top.v:3]
+	Parameter WITH_CSR bound to: 1 - type: integer 
+	Parameter PRE_REGISTER bound to: 1'b1 
+	Parameter RESET_STRATEGY bound to: MINI - type: string 
+	Parameter RESET_PC bound to: 0 - type: integer 
+	Parameter MDU bound to: 1'b0 
+	Parameter COMPRESSED bound to: 1'b0 
+INFO: [Synth 8-6157] synthesizing module 'serv_csr' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_csr.v:2]
+	Parameter RESET_STRATEGY bound to: MINI - type: string 
+WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_csr.v:77]
+INFO: [Synth 8-6155] done synthesizing module 'serv_csr' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_csr.v:2]
+INFO: [Synth 8-6157] synthesizing module 'serv_state' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_state.v:1]
+	Parameter RESET_STRATEGY bound to: MINI - type: string 
+	Parameter WITH_CSR bound to: 1'b1 
+	Parameter ALIGN bound to: 1'b0 
+	Parameter MDU bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'serv_state' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_state.v:1]
+INFO: [Synth 8-6157] synthesizing module 'serv_decode' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_decode.v:2]
+	Parameter PRE_REGISTER bound to: 1'b1 
+	Parameter MDU bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'serv_decode' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_decode.v:2]
+INFO: [Synth 8-6157] synthesizing module 'serv_immdec' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_immdec.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'serv_immdec' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_immdec.v:2]
+INFO: [Synth 8-6157] synthesizing module 'serv_bufreg' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_bufreg.v:1]
+	Parameter MDU bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'serv_bufreg' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_bufreg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'serv_bufreg2' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_bufreg2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'serv_bufreg2' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_bufreg2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'serv_ctrl' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_ctrl.v:2]
+	Parameter RESET_STRATEGY bound to: MINI - type: string 
+	Parameter RESET_PC bound to: 0 - type: integer 
+	Parameter WITH_CSR bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'serv_ctrl' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_ctrl.v:2]
+INFO: [Synth 8-6157] synthesizing module 'serv_alu' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_alu.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'serv_alu' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_alu.v:2]
+INFO: [Synth 8-6157] synthesizing module 'serv_rf_if' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_rf_if.v:2]
+	Parameter WITH_CSR bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'serv_rf_if' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_rf_if.v:2]
+INFO: [Synth 8-6157] synthesizing module 'serv_mem_if' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_mem_if.v:2]
+	Parameter WITH_CSR bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'serv_mem_if' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_mem_if.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'serv_top' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_top.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'servile' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servile_1.3.0/servile/servile.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'servant' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'servus' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus.v:2]
+WARNING: [Synth 8-6014] Unused sequential element gen_pre_register.imm25_reg was removed.  [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_decode.v:242]
+WARNING: [Synth 8-7129] Port i_mdu_op in module serv_bufreg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[31] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[29] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[28] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[27] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[25] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[24] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[23] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[19] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[18] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[17] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[16] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[15] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[11] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[10] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[9] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[8] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[7] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_mdu_op in module serv_state is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_mdu_ready in module serv_state is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ibus_rdt[1] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ibus_rdt[0] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[31] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[30] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[29] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[28] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[27] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[26] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[25] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[24] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[23] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[22] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[21] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[20] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[19] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[18] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[17] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[16] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[15] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[14] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[13] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[12] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[11] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[10] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[9] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[8] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[7] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[6] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[5] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[4] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[3] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[2] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[1] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[0] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_clk in module servile_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_rst in module servile_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ren in module serv_rf_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[30] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[29] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[28] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[27] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[26] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[25] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[24] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[23] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[22] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[21] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[20] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[19] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[18] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[17] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[16] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[15] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[14] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[13] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[12] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[11] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[10] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[9] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[8] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[7] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[6] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[5] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[4] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[3] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[2] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[1] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[0] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_sel[3] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_sel[2] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_sel[1] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_sel[0] in module servant_mux is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3227.320 ; gain = 213.516
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3245.223 ; gain = 231.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3245.223 ; gain = 231.418
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 3258.734 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/data/zcu106.xdc]
+Finished Parsing XDC File [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/data/zcu106.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3369.242 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 3396.969 ; gain = 383.164
+60 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 3396.969 ; gain = 1488.895
+set_property needs_refresh false [get_runs synth_1]
+set_property needs_refresh false [get_runs impl_1]
+report_methodology -name ultrafast_methodology_1
+Command: report_methodology -name ultrafast_methodology_1
+INFO: [Timing 38-2] Deriving generated clocks
+INFO: [DRC 23-133] Running Methodology with 2 threads
+report_methodology completed successfully
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xczu7ev-ffvc1156-2-e
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 3792.844 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/data/zcu106.xdc]
+Finished Parsing XDC File [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/data/zcu106.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3792.844 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 7 instances were transformed.
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+  RAM256X1D => RAM256X1D (MUXF7(x4), MUXF8(x2), RAMD64E(x8)): 4 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 2 instances
+
+open_run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 4012.473 ; gain = 219.629
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xczu7ev-ffvc1156-2-e
+Top: servus
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 5499.164 ; gain = 0.000
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6901] identifier 'f' is used before its declaration [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servile_1.3.0/servile/servile_mux.v:64]
+INFO: [Synth 8-6157] synthesizing module 'servus' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus.v:2]
+	Parameter memsize bound to: 8192 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:73658]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (0#1) [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:73658]
+INFO: [Synth 8-6157] synthesizing module 'servus_clock_gen' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:2]
+INFO: [Synth 8-6157] synthesizing module 'MMCME4_ADV' [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:82781]
+	Parameter CLKFBOUT_MULT_F bound to: 48.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 8.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 75.000000 - type: double 
+	Parameter DIVCLK_DIVIDE bound to: 5 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME4_ADV' (0#1) [C:/Xilinx/Vivado/2024.1/scripts/rt/data/unisim_comp.v:82781]
+WARNING: [Synth 8-7071] port 'CDDCDONE' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'CLKFBSTOPPED' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'CLKINSTOPPED' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'DO' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'DRDY' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'PSDONE' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'CDDCREQ' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'DADDR' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'DCLK' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'DEN' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'DI' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'DWE' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'PSCLK' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'PSEN' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7071] port 'PSINCDEC' of module 'MMCME4_ADV' is unconnected for instance 'mmcm' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+WARNING: [Synth 8-7023] instance 'mmcm' of module 'MMCME4_ADV' has 35 connections declared, but only 20 given [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'servus_clock_gen' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus_clock_gen.v:2]
+INFO: [Synth 8-6157] synthesizing module 'servant' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant.v:2]
+	Parameter memfile bound to: zephyr_hello.hex - type: string 
+	Parameter memsize bound to: 8192 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'servant_mux' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant_mux.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'servant_mux' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant_mux.v:7]
+INFO: [Synth 8-6157] synthesizing module 'servant_ram' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant_ram.v:2]
+	Parameter depth bound to: 8192 - type: integer 
+	Parameter RESET_STRATEGY bound to: MINI - type: string 
+	Parameter memfile bound to: zephyr_hello.hex - type: string 
+INFO: [Synth 8-251] Preloading  from zephyr_hello.hex [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant_ram.v:42]
+INFO: [Synth 8-3876] $readmem data file 'zephyr_hello.hex' is read successfully [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant_ram.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'servant_ram' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant_ram.v:2]
+INFO: [Synth 8-6157] synthesizing module 'servant_timer' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant_timer.v:2]
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter RESET_STRATEGY bound to: MINI - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'servant_timer' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant_timer.v:2]
+INFO: [Synth 8-6157] synthesizing module 'servant_gpio' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant_gpio.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'servant_gpio' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant_gpio.v:1]
+INFO: [Synth 8-6157] synthesizing module 'serv_rf_ram' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_rf_ram.v:1]
+	Parameter width bound to: 2 - type: integer 
+	Parameter csr_regs bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'serv_rf_ram' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_rf_ram.v:1]
+INFO: [Synth 8-6157] synthesizing module 'servile' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servile_1.3.0/servile/servile.v:9]
+	Parameter rf_width bound to: 2 - type: integer 
+	Parameter sim bound to: 1'b0 
+	Parameter with_c bound to: 1'b0 
+	Parameter with_csr bound to: 1'b1 
+	Parameter with_mdu bound to: 1'b0 
+INFO: [Synth 8-6157] synthesizing module 'servile_mux' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servile_1.3.0/servile/servile_mux.v:8]
+	Parameter sim bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'servile_mux' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servile_1.3.0/servile/servile_mux.v:8]
+INFO: [Synth 8-6157] synthesizing module 'servile_arbiter' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servile_1.3.0/servile/servile_arbiter.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'servile_arbiter' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servile_1.3.0/servile/servile_arbiter.v:9]
+INFO: [Synth 8-6157] synthesizing module 'serv_rf_ram_if' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_rf_ram_if.v:2]
+	Parameter width bound to: 2 - type: integer 
+	Parameter reset_strategy bound to: MINI - type: string 
+	Parameter csr_regs bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'serv_rf_ram_if' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_rf_ram_if.v:2]
+INFO: [Synth 8-6157] synthesizing module 'serv_top' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_top.v:3]
+	Parameter WITH_CSR bound to: 1 - type: integer 
+	Parameter PRE_REGISTER bound to: 1'b1 
+	Parameter RESET_STRATEGY bound to: MINI - type: string 
+	Parameter RESET_PC bound to: 0 - type: integer 
+	Parameter MDU bound to: 1'b0 
+	Parameter COMPRESSED bound to: 1'b0 
+INFO: [Synth 8-6157] synthesizing module 'serv_csr' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_csr.v:2]
+	Parameter RESET_STRATEGY bound to: MINI - type: string 
+WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_csr.v:77]
+INFO: [Synth 8-6155] done synthesizing module 'serv_csr' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_csr.v:2]
+INFO: [Synth 8-6157] synthesizing module 'serv_state' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_state.v:1]
+	Parameter RESET_STRATEGY bound to: MINI - type: string 
+	Parameter WITH_CSR bound to: 1'b1 
+	Parameter ALIGN bound to: 1'b0 
+	Parameter MDU bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'serv_state' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_state.v:1]
+INFO: [Synth 8-6157] synthesizing module 'serv_decode' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_decode.v:2]
+	Parameter PRE_REGISTER bound to: 1'b1 
+	Parameter MDU bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'serv_decode' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_decode.v:2]
+INFO: [Synth 8-6157] synthesizing module 'serv_immdec' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_immdec.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'serv_immdec' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_immdec.v:2]
+INFO: [Synth 8-6157] synthesizing module 'serv_bufreg' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_bufreg.v:1]
+	Parameter MDU bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'serv_bufreg' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_bufreg.v:1]
+INFO: [Synth 8-6157] synthesizing module 'serv_bufreg2' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_bufreg2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'serv_bufreg2' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_bufreg2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'serv_ctrl' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_ctrl.v:2]
+	Parameter RESET_STRATEGY bound to: MINI - type: string 
+	Parameter RESET_PC bound to: 0 - type: integer 
+	Parameter WITH_CSR bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'serv_ctrl' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_ctrl.v:2]
+INFO: [Synth 8-6157] synthesizing module 'serv_alu' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_alu.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'serv_alu' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_alu.v:2]
+INFO: [Synth 8-6157] synthesizing module 'serv_rf_if' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_rf_if.v:2]
+	Parameter WITH_CSR bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'serv_rf_if' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_rf_if.v:2]
+INFO: [Synth 8-6157] synthesizing module 'serv_mem_if' [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_mem_if.v:2]
+	Parameter WITH_CSR bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'serv_mem_if' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_mem_if.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'serv_top' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_top.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'servile' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servile_1.3.0/servile/servile.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'servant' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servant.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'servus' (0#1) [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/servant/servus.v:2]
+WARNING: [Synth 8-6014] Unused sequential element gen_pre_register.imm25_reg was removed.  [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/serv_1.3.0/rtl/serv_decode.v:242]
+WARNING: [Synth 8-7129] Port i_mdu_op in module serv_bufreg is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[31] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[29] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[28] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[27] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[25] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[24] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[23] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[19] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[18] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[17] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[16] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[15] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[11] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[10] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[9] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[8] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_rdt[7] in module serv_decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_mdu_op in module serv_state is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_mdu_ready in module serv_state is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ibus_rdt[1] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ibus_rdt[0] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[31] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[30] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[29] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[28] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[27] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[26] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[25] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[24] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[23] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[22] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[21] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[20] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[19] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[18] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[17] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[16] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[15] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[14] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[13] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[12] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[11] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[10] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[9] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[8] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[7] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[6] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[5] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[4] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[3] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[2] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[1] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ext_rd[0] in module serv_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_clk in module servile_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_rst in module servile_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_ren in module serv_rf_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[30] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[29] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[28] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[27] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[26] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[25] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[24] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[23] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[22] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[21] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[20] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[19] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[18] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[17] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[16] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[15] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[14] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[13] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[12] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[11] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[10] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[9] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[8] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[7] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[6] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[5] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[4] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[3] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[2] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[1] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_adr[0] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_sel[3] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_sel[2] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_sel[1] in module servant_mux is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_wb_cpu_sel[0] in module servant_mux is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 5499.164 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 5499.164 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 5499.164 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 5499.164 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/data/zcu106.xdc]
+Finished Parsing XDC File [C:/Users/Jared Woolston/Documents/GitHub/serv-hardware/servant_1.3.0/zcu106-vivado/src/servant_1.3.0/data/zcu106.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5499.164 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 5544.902 ; gain = 45.738
+57 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 5544.902 ; gain = 45.738

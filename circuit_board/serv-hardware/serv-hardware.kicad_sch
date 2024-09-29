@@ -1,5 +1,51 @@
-(kicad_sch (version 20231120) (generator "eeschema") (generator_version "8.0")
-  (paper "A4")
-  (lib_symbols)
-  (symbol_instances)
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "a3abccc6-6f3f-4223-9375-6c7507473c78")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 129.54 38.1)
+		(size 41.91 31.75)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "0ac05589-c3d0-4957-b26f-6f2f60944639")
+		(property "Sheetname" "serv_alu"
+			(at 129.54 37.3884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "serv_alu.kicad_sch"
+			(at 129.54 70.4346 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "serv-hardware"
+				(path "/a3abccc6-6f3f-4223-9375-6c7507473c78"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
 )

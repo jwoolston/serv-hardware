@@ -1,0 +1,61 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Fri Sep 27 17:53:23 2024
+| Host         : DESKTOP-8CFAEH8 running 64-bit Ubuntu 22.04.5 LTS
+| Command      : report_methodology -file servus_methodology_drc_routed.rpt -pb servus_methodology_drc_routed.pb -rpx servus_methodology_drc_routed.rpx
+| Design       : servus
+| Device       : xczu7ev-ffvc1156-2-e
+| Speed File   : -2
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 5
++----------+------------------+-----------------------------------------------------------+------------+
+| Rule     | Severity         | Description                                               | Violations |
++----------+------------------+-----------------------------------------------------------+------------+
+| TIMING-2 | Critical Warning | Invalid primary clock source pin                          | 1          |
+| SYNTH-5  | Warning          | Mapped onto distributed RAM because of timing constraints | 4          |
++----------+------------------+-----------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-2#1 Critical Warning
+Invalid primary clock source pin  
+A primary clock sys_clk_pin is created on an inappropriate pin ibufds/IBUFCTRL_INST/O. It is recommended to create a primary clock only on a proper clock source (input port or primitive output pin with no timing arc)
+Related violations: <none>
+
+SYNTH-5#1 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance servant/rf_ram/memory_reg_0_255_0_0 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#2 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance servant/rf_ram/memory_reg_0_255_1_1 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#3 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance servant/rf_ram/memory_reg_256_511_0_0 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+SYNTH-5#4 Warning
+Mapped onto distributed RAM because of timing constraints  
+The instance servant/rf_ram/memory_reg_256_511_1_1 is implemented as distributed LUT RAM for the following reason: The timing constraints suggest that the chosen mapping will yield a better timing.
+Related violations: <none>
+
+

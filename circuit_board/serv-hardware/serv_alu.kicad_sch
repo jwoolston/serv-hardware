@@ -1,0 +1,136 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "b21ddf60-bdb0-4827-922f-0bf50b72ef5d")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 53.34 80.01)
+		(size 27.94 25.4)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "0767a5b0-553d-4444-80c1-745a8f7439de")
+		(property "Sheetname" "serv_alu_add"
+			(at 53.34 79.2984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "serv_alu_add.kicad_sch"
+			(at 53.34 105.9946 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "o_cmp" output
+			(at 81.28 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "21f86fc5-cd6e-44f0-b133-049f0c4889e5")
+		)
+		(pin "i_sub" input
+			(at 53.34 102.87 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "fd3211b3-0baa-410b-b5b1-e66ec8a5402e")
+		)
+		(pin "i_en" input
+			(at 53.34 90.17 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "0760cc13-25d7-4f67-bfd2-471ce502e090")
+		)
+		(pin "clk" input
+			(at 53.34 82.55 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "72b6b1b0-9ef6-41ce-8f4c-ed4ae80cce46")
+		)
+		(pin "i_op_b" input
+			(at 53.34 92.71 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "cd5595d6-5f89-471e-b2ed-2cad8a32cd21")
+		)
+		(pin "i_rs1" input
+			(at 53.34 100.33 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "f0c137e0-f638-487a-a304-3c133ec0463e")
+		)
+		(pin "result_slt_i" output
+			(at 81.28 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "4cbed8f2-dbff-4f02-91f5-1f59c24c1371")
+		)
+		(pin "result_eq0_i__0" output
+			(at 81.28 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "3a38753c-a61c-45dc-90ff-d8bdf4b7776b")
+		)
+		(pin "i_cnt0" input
+			(at 53.34 87.63 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "2f846518-72c5-48dd-ae2d-84b253254e32")
+		)
+		(instances
+			(project "serv-hardware"
+				(path "/a3abccc6-6f3f-4223-9375-6c7507473c78/0ac05589-c3d0-4957-b26f-6f2f60944639"
+					(page "3")
+				)
+			)
+		)
+	)
+)
